@@ -102,11 +102,8 @@ export default function HomePage() {
 
       {/* ─────────────────── Company Overview ─────────────────── */}
       <section className="rule">
-        <Container className="grid gap-10 py-20 md:grid-cols-12 md:py-28">
-          <Reveal className="md:col-span-4">
-            <p className="eyebrow">01 — The Company</p>
-          </Reveal>
-          <div className="md:col-span-8">
+        <Container className="py-20 md:py-28">
+          <div className="max-w-3xl">
             <Reveal>
               <h2 className="font-serif text-display-md font-light text-ink">
                 A trading company built on careful work and steady
@@ -136,10 +133,7 @@ export default function HomePage() {
       {/* ──────────────────── Core Activities ─────────────────── */}
       <section className="rule bg-navy-wash/40">
         <Container className="py-20 md:py-28">
-          <Reveal>
-            <p className="eyebrow">02 — Core Activities</p>
-          </Reveal>
-          <div className="mt-6 flex flex-wrap items-end justify-between gap-6">
+          <div className="flex flex-wrap items-end justify-between gap-6">
             <Reveal>
               <h2 className="max-w-xl font-serif text-display-md font-light text-ink">
                 What we do, day to day.
@@ -225,10 +219,7 @@ export default function HomePage() {
           <div className="grid gap-12 md:grid-cols-12">
             <div className="md:col-span-4">
               <Reveal>
-                <p className="eyebrow">03 — How We Work</p>
-              </Reveal>
-              <Reveal delay={0.08}>
-                <h2 className="mt-6 font-serif text-display-md font-light text-ink">
+                <h2 className="font-serif text-display-md font-light text-ink">
                   Why partners choose AYMO Horizon.
                 </h2>
               </Reveal>
