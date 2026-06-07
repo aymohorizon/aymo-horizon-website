@@ -3,9 +3,6 @@ import { ArrowRight } from "lucide-react";
 import Container from "@/components/Container";
 import Reveal from "@/components/Reveal";
 import ActivityCard from "@/components/ActivityCard";
-import HeroHeadline from "@/components/HeroHeadline";
-import HorizonArc from "@/components/HorizonArc";
-import Marquee from "@/components/Marquee";
 import { ACTIVITIES, SITE } from "@/lib/site";
 
 const PRINCIPLES = [
@@ -36,41 +33,50 @@ export default function HomePage() {
     <>
       {/* ───────────────────────── Hero ───────────────────────── */}
       <section className="relative overflow-hidden">
-        <HorizonArc />
+        {/* Quiet geometric backdrop — a single horizon line motif */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-line"
+        />
         <Container className="py-24 md:py-36">
-          <div>
-            <Reveal>
-              <p className="eyebrow">Dubai, United Arab Emirates</p>
-            </Reveal>
-            <HeroHeadline />
-            <Reveal delay={0.16}>
-              <p className="mt-8 max-w-prose text-lg leading-relaxed text-ink-soft">
-                {SITE.description}
-              </p>
-            </Reveal>
-            <Reveal delay={0.24}>
-              <div className="mt-10 flex flex-wrap items-center gap-4">
-                <Link
-                  href="/contact"
-                  className="group inline-flex items-center gap-3 bg-ink px-7 py-3.5 text-sm font-medium text-paper transition-colors duration-200 hover:bg-navy"
-                >
-                  Contact Us
-                  <ArrowRight
-                    size={16}
-                    strokeWidth={1.5}
-                    className="transition-transform duration-200 group-hover:translate-x-0.5"
-                    aria-hidden
-                  />
-                </Link>
-                <Link
-                  href="/about"
-                  className="inline-flex items-center gap-3 border border-ink/20 px-7 py-3.5 text-sm font-medium text-ink transition-colors duration-200 hover:border-ink"
-                >
-                  Learn More
-                </Link>
-              </div>
-            </Reveal>
-          </div>
+          <Reveal>
+            <p className="eyebrow">Dubai, United Arab Emirates</p>
+          </Reveal>
+          <Reveal delay={0.08}>
+            <h1 className="mt-6 max-w-3xl font-serif text-display-xl font-light text-ink">
+              Building Businesses for a{" "}
+              <em className="font-normal not-italic text-navy">
+                Connected World
+              </em>
+            </h1>
+          </Reveal>
+          <Reveal delay={0.16}>
+            <p className="mt-8 max-w-prose text-lg leading-relaxed text-ink-soft">
+              {SITE.description}
+            </p>
+          </Reveal>
+          <Reveal delay={0.24}>
+            <div className="mt-10 flex flex-wrap items-center gap-4">
+              <Link
+                href="/contact"
+                className="group inline-flex items-center gap-3 bg-ink px-7 py-3.5 text-sm font-medium text-paper transition-colors duration-200 hover:bg-navy"
+              >
+                Contact Us
+                <ArrowRight
+                  size={16}
+                  strokeWidth={1.5}
+                  className="transition-transform duration-200 group-hover:translate-x-0.5"
+                  aria-hidden
+                />
+              </Link>
+              <Link
+                href="/about"
+                className="inline-flex items-center gap-3 border border-ink/20 px-7 py-3.5 text-sm font-medium text-ink transition-colors duration-200 hover:border-ink"
+              >
+                Learn More
+              </Link>
+            </div>
+          </Reveal>
         </Container>
       </section>
 
@@ -154,9 +160,6 @@ export default function HomePage() {
           </div>
         </Container>
       </section>
-
-      {/* ─────────────── Activities Marquee ─────────────── */}
-      <Marquee />
 
       {/* ─────────────────── Why AYMO Horizon ─────────────────── */}
       <section className="rule">
