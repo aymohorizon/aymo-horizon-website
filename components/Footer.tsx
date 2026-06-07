@@ -19,7 +19,7 @@ export default function Footer() {
           </div>
 
           <div className="md:col-span-3">
-            <p className="font-mono text-[0.6875rem] font-medium uppercase tracking-[0.12em] text-paper/40">
+            <p className="text-[0.6875rem] font-medium uppercase tracking-[0.18em] text-paper/40">
               Company
             </p>
             <ul className="mt-4 space-y-3">
@@ -37,7 +37,7 @@ export default function Footer() {
           </div>
 
           <div className="md:col-span-4">
-            <p className="font-mono text-[0.6875rem] font-medium uppercase tracking-[0.12em] text-paper/40">
+            <p className="text-[0.6875rem] font-medium uppercase tracking-[0.18em] text-paper/40">
               Office
             </p>
             <address className="mt-4 text-sm not-italic leading-relaxed text-paper/70">

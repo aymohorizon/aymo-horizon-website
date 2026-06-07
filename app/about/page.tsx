@@ -22,7 +22,7 @@ export default function AboutPage() {
             <p className="eyebrow">About</p>
           </Reveal>
           <Reveal delay={0.08}>
-            <h1 className="mt-6 max-w-3xl font-display text-display-lg font-medium text-ink">
+            <h1 className="mt-6 max-w-3xl font-serif text-display-lg font-light text-ink">
               A Dubai company with a straightforward way of doing business.
             </h1>
           </Reveal>
@@ -70,7 +70,7 @@ export default function AboutPage() {
           <Reveal>
             <div className="h-full border border-line bg-white p-10 md:p-12">
               <p className="eyebrow">Mission</p>
-              <p className="mt-6 font-display text-2xl font-medium tracking-tight leading-snug text-ink md:text-[1.75rem]">
+              <p className="mt-6 font-serif text-2xl font-light leading-snug text-ink md:text-[1.75rem]">
                 To build sustainable business opportunities through commerce,
                 innovation, and strategic execution.
               </p>
@@ -78,10 +78,10 @@ export default function AboutPage() {
           </Reveal>
           <Reveal delay={0.1}>
             <div className="h-full border border-line bg-navy p-10 text-paper md:p-12">
-              <p className="font-mono text-[0.6875rem] font-medium uppercase tracking-[0.12em] text-paper/50">
+              <p className="text-[0.6875rem] font-medium uppercase tracking-[0.18em] text-paper/50">
                 Vision
               </p>
-              <p className="mt-6 font-display text-2xl font-medium tracking-tight leading-snug md:text-[1.75rem]">
+              <p className="mt-6 font-serif text-2xl font-light leading-snug md:text-[1.75rem]">
                 To become a trusted international business group with a
                 long-term approach to growth and value creation.
               </p>
@@ -97,7 +97,7 @@ export default function AboutPage() {
             <p className="eyebrow">Values</p>
           </Reveal>
           <Reveal delay={0.08}>
-            <h2 className="mt-6 max-w-xl font-display text-display-md font-medium text-ink">
+            <h2 className="mt-6 max-w-xl font-serif text-display-md font-light text-ink">
               Five commitments we hold ourselves to.
             </h2>
           </Reveal>
@@ -107,7 +107,7 @@ export default function AboutPage() {
               <Reveal key={value.title} delay={i * 0.05}>
                 <div className="grid gap-2 border-b border-line py-7 sm:grid-cols-12 sm:gap-6">
                   <dt className="sm:col-span-4">
-                    <span className="mr-4 font-mono text-xs text-navy">
+                    <span className="mr-4 font-serif text-sm italic text-navy">
                       {String(i + 1).padStart(2, "0")}
                     </span>
                     <span className="font-medium text-ink">{value.title}</span>
@@ -126,7 +126,7 @@ export default function AboutPage() {
       <section className="rule">
         <Container className="flex flex-col items-start gap-6 py-16 md:flex-row md:items-center md:justify-between md:py-20">
           <Reveal>
-            <p className="max-w-md font-display text-2xl font-medium tracking-tight text-ink">
+            <p className="max-w-md font-serif text-2xl font-light text-ink">
               Questions about who we are or how we work?
             </p>
           </Reveal>

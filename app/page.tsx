@@ -43,9 +43,11 @@ export default function HomePage() {
             <p className="eyebrow">Dubai, United Arab Emirates</p>
           </Reveal>
           <Reveal delay={0.08}>
-            <h1 className="mt-6 max-w-3xl font-display text-display-xl font-medium text-ink">
+            <h1 className="mt-6 max-w-3xl font-serif text-display-xl font-light text-ink">
               Building Businesses for a{" "}
-              <span className="text-navy">Connected World</span>
+              <em className="font-normal not-italic text-navy">
+                Connected World
+              </em>
             </h1>
           </Reveal>
           <Reveal delay={0.16}>
@@ -86,7 +88,7 @@ export default function HomePage() {
           </Reveal>
           <div className="md:col-span-8">
             <Reveal>
-              <h2 className="font-display text-display-md font-medium text-ink">
+              <h2 className="font-serif text-display-md font-light text-ink">
                 A trading company built on careful work and steady
                 relationships.
               </h2>
@@ -119,7 +121,7 @@ export default function HomePage() {
           </Reveal>
           <div className="mt-6 flex flex-wrap items-end justify-between gap-6">
             <Reveal>
-              <h2 className="max-w-xl font-display text-display-md font-medium text-ink">
+              <h2 className="max-w-xl font-serif text-display-md font-light text-ink">
                 What we do, day to day.
               </h2>
             </Reveal>
@@ -150,7 +152,7 @@ export default function HomePage() {
                 href="/activities"
                 className="group flex h-full flex-col justify-between border border-line bg-navy p-8 text-paper transition-colors duration-300 hover:bg-navy-deep"
               >
-                <p className="font-display text-xl font-medium tracking-tight">
+                <p className="font-serif text-xl font-medium tracking-tight">
                   See all activities
                 </p>
                 <ArrowRight
@@ -174,7 +176,7 @@ export default function HomePage() {
                 <p className="eyebrow">03 — How We Work</p>
               </Reveal>
               <Reveal delay={0.08}>
-                <h2 className="mt-6 font-display text-display-md font-medium text-ink">
+                <h2 className="mt-6 font-serif text-display-md font-light text-ink">
                   Why partners choose AYMO Horizon.
                 </h2>
               </Reveal>
@@ -193,7 +195,7 @@ export default function HomePage() {
                   <Reveal key={p.title} delay={i * 0.05}>
                     <div className="grid gap-2 border-b border-line py-7 first:pt-0 sm:grid-cols-12 sm:gap-6">
                       <dt className="sm:col-span-4">
-                        <span className="mr-4 font-mono text-xs text-navy">
+                        <span className="mr-4 font-serif text-sm italic text-navy">
                           {String(i + 1).padStart(2, "0")}
                         </span>
                         <span className="font-medium text-ink">{p.title}</span>
@@ -215,10 +217,10 @@ export default function HomePage() {
         <Container className="flex flex-col items-start gap-8 py-20 md:flex-row md:items-end md:justify-between md:py-24">
           <Reveal>
             <div>
-              <p className="font-mono text-[0.6875rem] font-medium uppercase tracking-[0.12em] text-paper/50">
+              <p className="text-[0.6875rem] font-medium uppercase tracking-[0.18em] text-paper/50">
                 Get in Touch
               </p>
-              <h2 className="mt-5 max-w-xl font-display text-display-md font-medium">
+              <h2 className="mt-5 max-w-xl font-serif text-display-md font-light">
                 Working on something we could help with? We&apos;d like to hear
                 from you.
               </h2>

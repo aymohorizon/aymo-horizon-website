@@ -29,7 +29,7 @@ export default function ContactForm() {
         <span className="flex h-10 w-10 items-center justify-center rounded-full bg-navy-wash text-navy">
           <Check size={18} strokeWidth={2} aria-hidden />
         </span>
-        <h3 className="font-display text-2xl font-medium tracking-tight">
+        <h3 className="font-serif text-2xl font-medium tracking-tight">
           Message received
         </h3>
         <p className="text-sm leading-relaxed text-ink-soft">

@@ -4,8 +4,8 @@ import type { Config } from "tailwindcss";
  * AYMO Horizon — Design System
  *
  * Palette: warm white surfaces, near-black ink, a single restrained navy.
- * Typography: Archivo (grotesque, display + body) with Spline Sans Mono
- * for labels, indices, and tabular data. Tight tracking at display sizes.
+ * Typography: Newsreader (serif display) + Instrument Sans (text).
+ * Spacing: generous, editorial rhythm built on an 8px base.
  */
 const config: Config = {
   content: [
@@ -29,14 +29,13 @@ const config: Config = {
         line: "#E4E4DF",
       },
       fontFamily: {
-        display: ["var(--font-display)", "Helvetica Neue", "Arial", "sans-serif"],
-        sans: ["var(--font-display)", "Helvetica Neue", "Arial", "sans-serif"],
-        mono: ["var(--font-mono)", "ui-monospace", "SFMono-Regular", "monospace"],
+        serif: ["var(--font-serif)", "Georgia", "serif"],
+        sans: ["var(--font-sans)", "Helvetica Neue", "Arial", "sans-serif"],
       },
       fontSize: {
-        "display-xl": ["clamp(2.625rem, 5.5vw, 4.5rem)", { lineHeight: "1.02", letterSpacing: "-0.035em" }],
-        "display-lg": ["clamp(2.125rem, 4.25vw, 3.25rem)", { lineHeight: "1.06", letterSpacing: "-0.03em" }],
-        "display-md": ["clamp(1.625rem, 2.75vw, 2.25rem)", { lineHeight: "1.12", letterSpacing: "-0.02em" }],
+        "display-xl": ["clamp(2.75rem, 6vw, 4.75rem)", { lineHeight: "1.05", letterSpacing: "-0.02em" }],
+        "display-lg": ["clamp(2.25rem, 4.5vw, 3.5rem)", { lineHeight: "1.08", letterSpacing: "-0.015em" }],
+        "display-md": ["clamp(1.75rem, 3vw, 2.375rem)", { lineHeight: "1.15", letterSpacing: "-0.01em" }],
       },
       maxWidth: {
         site: "76rem",
