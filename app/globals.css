@@ -9,7 +9,6 @@
 
   body {
     @apply bg-paper text-ink font-sans antialiased;
-    font-feature-settings: "ss01" on, "cv01" on;
   }
 
   ::selection {
@@ -23,8 +22,8 @@
     @apply border-t border-line;
   }
 
-  /* Small uppercase label used above headings */
+  /* Small uppercase mono label used above headings */
   .eyebrow {
-    @apply text-[0.6875rem] font-medium uppercase tracking-[0.18em] text-ink-mute;
+    @apply font-mono text-[0.6875rem] font-medium uppercase tracking-[0.12em] text-ink-mute;
   }
 }

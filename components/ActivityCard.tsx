@@ -35,7 +35,7 @@ export default function ActivityCard({
         className="text-navy transition-transform duration-300 ease-gentle group-hover:-translate-y-0.5"
         aria-hidden
       />
-      <h3 className="mt-6 font-serif text-xl font-medium tracking-tight text-ink">
+      <h3 className="mt-6 font-display text-xl font-semibold tracking-tight text-ink">
         {activity.title}
       </h3>
       <p className="mt-3 text-sm leading-relaxed text-ink-soft">

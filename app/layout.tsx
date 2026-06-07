@@ -1,22 +1,21 @@
 import type { Metadata } from "next";
-import { Newsreader, Instrument_Sans } from "next/font/google";
+import { Archivo, Spline_Sans_Mono } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { SITE } from "@/lib/site";
 import "./globals.css";
 
-const serif = Newsreader({
+const display = Archivo({
   subsets: ["latin"],
-  variable: "--font-serif",
-  style: ["normal", "italic"],
-  weight: ["300", "400", "500"],
+  variable: "--font-display",
+  weight: ["400", "500", "600"],
   display: "swap",
 });
 
-const sans = Instrument_Sans({
+const mono = Spline_Sans_Mono({
   subsets: ["latin"],
-  variable: "--font-sans",
-  weight: ["400", "500", "600"],
+  variable: "--font-mono",
+  weight: ["400", "500"],
   display: "swap",
 });
 
@@ -86,7 +85,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${serif.variable} ${sans.variable}`}>
+    <html lang="en" className={`${display.variable} ${mono.variable}`}>
       <body>
         <script
           type="application/ld+json"

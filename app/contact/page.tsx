@@ -25,7 +25,7 @@ export default function ContactPage() {
             <p className="eyebrow">Contact</p>
           </Reveal>
           <Reveal delay={0.08}>
-            <h1 className="mt-6 max-w-3xl font-serif text-display-lg font-light text-ink">
+            <h1 className="mt-6 max-w-3xl font-display text-display-lg font-medium text-ink">
               We reply to every message.
             </h1>
           </Reveal>

@@ -5,7 +5,7 @@ export default function NotFound() {
   return (
     <Container className="py-32 text-center">
       <p className="eyebrow">404</p>
-      <h1 className="mt-6 font-serif text-display-md font-light text-ink">
+      <h1 className="mt-6 font-display text-display-md font-medium text-ink">
         This page does not exist.
       </h1>
       <Link

@@ -23,7 +23,7 @@ export default function ActivitiesPage() {
             <p className="eyebrow">Activities</p>
           </Reveal>
           <Reveal delay={0.08}>
-            <h1 className="mt-6 max-w-3xl font-serif text-display-lg font-light text-ink">
+            <h1 className="mt-6 max-w-3xl font-display text-display-lg font-medium text-ink">
               Six lines of work, one standard of care.
             </h1>
           </Reveal>
@@ -54,7 +54,7 @@ export default function ActivitiesPage() {
       <section className="rule">
         <Container className="flex flex-col items-start gap-6 py-16 md:flex-row md:items-center md:justify-between md:py-20">
           <Reveal>
-            <p className="max-w-md font-serif text-2xl font-light text-ink">
+            <p className="max-w-md font-display text-2xl font-medium tracking-tight text-ink">
               Interested in working with us on any of the above?
             </p>
           </Reveal>
