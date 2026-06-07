@@ -28,7 +28,7 @@ export default function ActivityCard({
   const Icon = ICONS[activity.icon] ?? Globe;
 
   return (
-    <article className="group flex h-full flex-col border border-line bg-white p-8 transition-colors duration-300 hover:border-navy/40">
+    <article className="group flex h-full flex-col border border-line bg-white p-8 transition-all duration-300 ease-gentle hover:-translate-y-1 hover:border-navy/40 hover:shadow-[0_12px_32px_-16px_rgba(28,43,69,0.25)]">
       <Icon
         size={26}
         strokeWidth={1.25}
