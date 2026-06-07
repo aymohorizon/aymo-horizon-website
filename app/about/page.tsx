@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 import Container from "@/components/Container";
 import Reveal from "@/components/Reveal";
 import { VALUES } from "@/lib/site";
@@ -27,6 +28,16 @@ export default function AboutPage() {
             </h1>
           </Reveal>
         </Container>
+        <figure className="relative h-[20rem] w-full overflow-hidden md:h-[26rem]">
+          <Image
+            src="https://images.unsplash.com/photo-1663768266259-d723cfbe969b?auto=format&fit=crop&w=2200&q=80"
+            alt="Dubai Marina skyline"
+            fill
+            sizes="100vw"
+            className="object-cover object-center saturate-[0.6]"
+          />
+          <div aria-hidden className="absolute inset-0 bg-navy/15 mix-blend-multiply" />
+        </figure>
       </section>
 
       {/* Who we are */}

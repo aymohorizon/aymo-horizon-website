@@ -1,9 +1,15 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import Container from "@/components/Container";
 import Reveal from "@/components/Reveal";
 import ActivityCard from "@/components/ActivityCard";
 import { ACTIVITIES, SITE } from "@/lib/site";
+
+const IMG = {
+  hero: "https://images.unsplash.com/photo-1748373452031-ee1ae4eb624d?auto=format&fit=crop&w=1400&q=80",
+  port: "https://images.unsplash.com/photo-1508404999913-79a3a2e75437?auto=format&fit=crop&w=2200&q=80",
+};
 
 const PRINCIPLES = [
   {
@@ -33,49 +39,63 @@ export default function HomePage() {
     <>
       {/* ───────────────────────── Hero ───────────────────────── */}
       <section className="relative overflow-hidden">
-        {/* Quiet geometric backdrop — a single horizon line motif */}
-        <div
-          aria-hidden
-          className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-line"
-        />
-        <Container className="py-24 md:py-36">
-          <Reveal>
-            <p className="eyebrow">Dubai, United Arab Emirates</p>
-          </Reveal>
-          <Reveal delay={0.08}>
-            <h1 className="mt-6 max-w-3xl font-serif text-display-xl font-light text-ink">
-              Building Businesses for a{" "}
-              <em className="font-normal not-italic text-navy">
-                Connected World
-              </em>
-            </h1>
-          </Reveal>
-          <Reveal delay={0.16}>
-            <p className="mt-8 max-w-prose text-lg leading-relaxed text-ink-soft">
-              {SITE.description}
-            </p>
-          </Reveal>
-          <Reveal delay={0.24}>
-            <div className="mt-10 flex flex-wrap items-center gap-4">
-              <Link
-                href="/contact"
-                className="group inline-flex items-center gap-3 bg-ink px-7 py-3.5 text-sm font-medium text-paper transition-colors duration-200 hover:bg-navy"
-              >
-                Contact Us
-                <ArrowRight
-                  size={16}
-                  strokeWidth={1.5}
-                  className="transition-transform duration-200 group-hover:translate-x-0.5"
-                  aria-hidden
-                />
-              </Link>
-              <Link
-                href="/about"
-                className="inline-flex items-center gap-3 border border-ink/20 px-7 py-3.5 text-sm font-medium text-ink transition-colors duration-200 hover:border-ink"
-              >
-                Learn More
-              </Link>
-            </div>
+        <Container className="grid items-center gap-12 py-20 md:grid-cols-12 md:py-28">
+          <div className="md:col-span-7">
+            <Reveal>
+              <p className="eyebrow">Dubai, United Arab Emirates</p>
+            </Reveal>
+            <Reveal delay={0.08}>
+              <h1 className="mt-6 font-serif text-display-xl font-light text-ink">
+                Building Businesses for a{" "}
+                <em className="font-normal not-italic text-navy">
+                  Connected World
+                </em>
+              </h1>
+            </Reveal>
+            <Reveal delay={0.16}>
+              <p className="mt-8 max-w-prose text-lg leading-relaxed text-ink-soft">
+                {SITE.description}
+              </p>
+            </Reveal>
+            <Reveal delay={0.24}>
+              <div className="mt-10 flex flex-wrap items-center gap-4">
+                <Link
+                  href="/contact"
+                  className="group inline-flex items-center gap-3 bg-ink px-7 py-3.5 text-sm font-medium text-paper transition-colors duration-200 hover:bg-navy"
+                >
+                  Contact Us
+                  <ArrowRight
+                    size={16}
+                    strokeWidth={1.5}
+                    className="transition-transform duration-200 group-hover:translate-x-0.5"
+                    aria-hidden
+                  />
+                </Link>
+                <Link
+                  href="/about"
+                  className="inline-flex items-center gap-3 border border-ink/20 px-7 py-3.5 text-sm font-medium text-ink transition-colors duration-200 hover:border-ink"
+                >
+                  Learn More
+                </Link>
+              </div>
+            </Reveal>
+          </div>
+
+          <Reveal delay={0.2} className="md:col-span-5">
+            <figure className="relative aspect-[4/5] w-full overflow-hidden">
+              <Image
+                src={IMG.hero}
+                alt="Downtown Dubai with Burj Khalifa"
+                fill
+                priority
+                sizes="(min-width: 768px) 40vw, 100vw"
+                className="object-cover saturate-[0.85]"
+              />
+              <div
+                aria-hidden
+                className="absolute inset-0 bg-navy/10 mix-blend-multiply"
+              />
+            </figure>
           </Reveal>
         </Container>
       </section>
@@ -165,6 +185,38 @@ export default function HomePage() {
             </Reveal>
           </div>
         </Container>
+      </section>
+
+      {/* ──────────────── Trade Band (full-width image) ─────────────── */}
+      <section className="relative">
+        <div className="relative h-[26rem] w-full overflow-hidden md:h-[30rem]">
+          <Image
+            src={IMG.port}
+            alt="Aerial view of a container port"
+            fill
+            sizes="100vw"
+            className="object-cover saturate-[0.7]"
+          />
+          <div aria-hidden className="absolute inset-0 bg-navy-deep/70" />
+          <Container className="relative flex h-full flex-col justify-center">
+            <Reveal>
+              <p className="text-[0.6875rem] font-medium uppercase tracking-[0.18em] text-paper/60">
+                International Trade
+              </p>
+            </Reveal>
+            <Reveal delay={0.08}>
+              <p className="mt-5 max-w-2xl font-serif text-display-md font-light text-paper">
+                Operating from Dubai. Trading across continents.
+              </p>
+            </Reveal>
+            <Reveal delay={0.16}>
+              <p className="mt-4 max-w-xl text-sm leading-relaxed text-paper/70">
+                Dubai connects the markets we work between — a position we use
+                every day to move goods reliably between suppliers and buyers.
+              </p>
+            </Reveal>
+          </Container>
+        </div>
       </section>
 
       {/* ─────────────────── Why AYMO Horizon ─────────────────── */}
