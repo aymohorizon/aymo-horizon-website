@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-paper text-ink font-sans antialiased;
+    font-feature-settings: "ss01" on, "cv01" on;
+  }
+
+  ::selection {
+    @apply bg-navy text-paper;
+  }
+}
+
+@layer components {
+  /* Hairline rule used between sections */
+  .rule {
+    @apply border-t border-line;
+  }
+
+  /* Small uppercase label used above headings */
+  .eyebrow {
+    @apply text-[0.6875rem] font-medium uppercase tracking-[0.18em] text-ink-mute;
+  }
+}
